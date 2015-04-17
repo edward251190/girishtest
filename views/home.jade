@@ -1,0 +1,39 @@
+doctype html
+html
+	head
+		title Drc Systems
+		//link(rel="stylesheet", href="http://192.168.0.18/Node.js/public/style.css")
+		link(rel="stylesheet", href="/style.css")
+		link(rel="stylesheet", href="/jquery-ui.min.css")
+		script(src='/jquery-1.7.1.min.js')
+		script(src='/jquery-ui.min.js')
+		script(src="/socket.io/socket.io.js")
+		//script(src="http://192.168.0.18/Node.js/public/script.js")
+		script(src="/script.js")
+	body
+		div.container#main
+			//div.navbar.navbar-fixed-top
+			//	div.navbar-inner
+			//		div.container
+			//			a.brand(href="#") Test App
+			div#chatEntries
+			div.row#entries
+				//input(type='text')#messageInput
+				textarea.span10#messageInput
+				div.btn-group.span2
+					button.btn.btn-success.width100.btn-large#submit(data-loading-text="Send") Send
+			div#nbUsersDiv
+				p
+					span#nbUsers
+					|  connected user(s).
+	div.modal.fade#modalPseudo
+		div.modal-header
+			h3 Choose a name
+		div.modal-body
+			p Choose a name :
+			input(type='text')#pseudoInput
+			div.alert.alert-error#alertPseudo
+				| This name is already used ! Choose another one.
+		div.modal-footer
+			button.btn.btn-primary#pseudoSubmit Go to the chat
+	
